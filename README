@@ -3,13 +3,11 @@
  * and ignores all Https certificates. It can also be used for using credentials
  * in your connection.
  * 
- *  <code><br/>
-		EasyHttpClient client = new EasyHttpClient();<br/>
-		System.out.println(client.get("https://encrypted.google.com/"));<br/>
- *  </code>
+		EasyHttpClient client = new EasyHttpClient();
+		System.out.println(client.get("https://encrypted.google.com"));
  * 
  * @author match2blue software development GmbH
- * @author René Fischer, Ulrich Scheller
+ * @author Rene Fischer, Ulrich Scheller
  */
 
 
