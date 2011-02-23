@@ -1,0 +1,16 @@
+/**
+ * Easy to use Http and Https client, that transparently adds gzip compression
+ * and ignores all Https certificates. It can also be used for using credentials
+ * in your connection.
+ * 
+ *  <code><br/>
+		EasyHttpClient client = new EasyHttpClient();<br/>
+		System.out.println(client.get("https://encrypted.google.com/"));<br/>
+ *  </code>
+ * 
+ * @author match2blue software development GmbH
+ * @author René Fischer, Ulrich Scheller
+ */
+
+
+- needs org.apache.http package from http://hc.apache.org/downloads.cgi
