@@ -1,5 +1,3 @@
-package com.match2blue.Videoblog;
-
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -70,6 +68,11 @@ import org.apache.http.protocol.HttpContext;
  * Easy to use Http and Https client, that transparently adds gzip compression
  * and ignores all Https certificates. It can also be used for using credentials
  * in your connection.
+ * 
+ * This class was created for Android applications, where the appropriate apache libraries
+ * are already available. If you are developing for another platform, make sure
+ * to add the httpclient and httpcore libs to your buildpath. They can be downloaded from
+ * http://hc.apache.org/downloads.cgi
  * 
  *  <code><br/>
 		EasyHttpClient client = new EasyHttpClient();<br/>
