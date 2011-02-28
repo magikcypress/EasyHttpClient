@@ -71,8 +71,8 @@ import org.apache.http.protocol.HttpContext;
  * 
  * This class was created for Android applications, where the appropriate apache libraries
  * are already available. If you are developing for another platform, make sure
- * to add the httpclient and httpcore libs to your buildpath. They can be downloaded from
- * http://hc.apache.org/downloads.cgi
+ * to add the httpclient, httpcore and commons-logging libs to your buildpath. 
+ * They can be downloaded from http://hc.apache.org/downloads.cgi
  * 
  *  <code><br/>
 		EasyHttpClient client = new EasyHttpClient();<br/>
@@ -104,8 +104,7 @@ public class EasyHttpClient extends DefaultHttpClient {
 	public EasyHttpClient() {
 		addRequestInterceptor(new HttpRequestInterceptor() {
 			public void process(final HttpRequest request,
-					final HttpContext context) throws HttpException,
-					IOException {
+					final HttpContext context) throws HttpException, IOException {
 				if (!request.containsHeader("Accept-Encoding")) {
 					request.addHeader("Accept-Encoding", "gzip");
 				}
@@ -190,6 +189,11 @@ public class EasyHttpClient extends DefaultHttpClient {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	public static void main(String[] args) {
+		EasyHttpClient client = new EasyHttpClient();
+		System.out.println(client.get("https://encrypted.google.com/"));		
 	}
 }
 
